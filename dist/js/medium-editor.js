@@ -5393,7 +5393,7 @@ MediumEditor.extensions = {};
                 // in order to trigger the editablePaste event.  Since this paste event
                 // is happening on the pastebin, the event handling code never knows about it
                 // So, we have to trigger editablePaste manually
-                this.trigger('editablePaste', { currentTarget: editable, target: editable }, editable);
+                this.trigger('editablePaste', { currentTarget: editable, target: editable, event: event }, editable);
                 return;
             }
 
