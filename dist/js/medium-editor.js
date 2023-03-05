@@ -975,6 +975,10 @@ MediumEditor.extensions = {};
                 }
             }
 
+            // 不必要なspanを消す為に、内部のテキストをinnerHTMLに置く
+            const rawText = blockContainer.innerText || blockContainer.textContent;
+            blockContainer.innerHTML = rawText;
+
             return doc.execCommand('formatBlock', false, tagName);
         },
 
