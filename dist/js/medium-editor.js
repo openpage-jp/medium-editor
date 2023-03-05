@@ -7187,10 +7187,6 @@ MediumEditor.extensions = {};
             return result;
         }
 
-        if (action === 'createHeader') {
-          return MediumEditor.pasteHTML('<h1>hoge</h1>')
-        }
-
         cmdValueArgument = opts && opts.value;
         return this.options.ownerDocument.execCommand(action, false, cmdValueArgument);
     }
